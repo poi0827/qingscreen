@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.poi.qingscreen'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.poi.qingscreen'
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        debug { }
+        release { minifyEnabled false }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+// 源码里有中文（跳过词表），强制 UTF-8，避免 Linux 云端平台默认编码差异
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    // 纯 Android 原生 API，零第三方依赖：云端一次编译通过率最高
+}

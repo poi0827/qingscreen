@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">清屏</string>
+    <string name="accessibility_desc">清屏通过读取当前窗口控件，自动点击「跳过广告 / 关闭广告」按钮来拦截开屏广告与误触跳转。本服务仅在设备上运行，不联网、不上传任何数据；拦截次数按应用保存在本机。</string>
+</resources>
